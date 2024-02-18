@@ -44,6 +44,7 @@ function! db#url#parse(url) abort
           \ 'port': match[5],
           \ 'path': db#url#decode(match[6] ==# '' ? '/' : match[6]),
           \ 'params': params,
+          \ 'SSL':'true', 
           \ 'fragment': fragment},
           \'v:val isnot# ""')
   endif
